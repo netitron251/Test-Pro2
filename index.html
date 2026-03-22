@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Poom Web</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+
+  <h1>🔥 เว็บของกู</h1>
+  <p>ค่าปัจจุบัน:</p>
+
+  <div id="data">กำลังโหลด...</div>
+
+  <script>
+    fetch("config.txt")
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById("data").innerText = text;
+      });
+  </script>
+
+</body>
+</html>
